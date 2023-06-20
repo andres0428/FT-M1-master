@@ -4,12 +4,14 @@
 
 Determiná que será impreso en la consola, sin ejecutar el código.
 
-> Investiga cuál es la diferencia entre declarar una variable con `var` y directamente asignarle un valor...
+> Investiga cuál es la diferencia entre declarar una variable con `var` y directamente asignarle un valor... 
+R/ cuando declaramos una variabel con 'var', esta se nos almacenará en el objeto window y los podemos refernciar en cualquier lugar de nuestro script.
+R/ Cuando lo hacemos directamente y le asignamos un valor, igualmente se nos almacenará en el objeto window y cuando lo instanciemos en otro lugar solo guardara el ultio valor PERO SOLO EN EL AMBITO GLOBAL...
 
 
 
 ```javascript
-x = 1;
+x = 1; //Si no le declaro un tipo de varible se va almacenar en le objeto window al igual que 'var' pero solo en el ambito global
 var a = 5;
 var b = 10;
 var c = function (a, b, c) {
@@ -45,7 +47,7 @@ baz = 2;
 var instructor = 'Tony';
 if (true) {
    var instructor = 'Franco';
-// }
+ }
 console.log(instructor); // // al estar declarado con VAR dentro del statement if 
 // y  con la condicion true, significa siempre va a entrar en el condicional 
 // por lo que modifica el valor de instructor a "franco"
